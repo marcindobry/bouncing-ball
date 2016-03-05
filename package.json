@@ -1,0 +1,10 @@
+{
+  "name": "yieldify-test",
+  "description": "My bouncy ball solution",
+  "version": "1.0.0",
+  "devDependencies": {
+    "babel-core": "~6.0.0",
+    "babel-loader": "~6.2.4",
+    "webpack": "~2.1.0-beta"
+  }
+}
