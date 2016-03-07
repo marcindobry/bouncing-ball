@@ -1,10 +1,14 @@
+import Ball from './Ball.js';
+import BallRenderer from './BallRenderer.js'
 import { dimensions } from "./utilities.js";
 
 $(document).ready(function() {
-  var $world = $("#bouncing-world");
+  let $world = $("#bouncing-world");
   $world.on("click", function(e) {
-    var x = e.clientX;
-    var y = e.clientY;
-    $world.html(`<div class='ball' style='background-color: red; top: ${y - 5}px; left: ${x - 5}px'></div>`);
+    let x = e.clientX;
+    let y = e.clientY;
+    let ball = new Ball(x, y);
+    let ballRenderer = new BallRenderer(ball);
+    ballRenderer.$ballElement.appendTo($world);
   })
 });
