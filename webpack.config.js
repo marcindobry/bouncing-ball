@@ -10,22 +10,26 @@ module.exports = {
   module: {
     loaders: [
       {
-        loader: 'babel-loader',
+        loader: 'babel',
         test: path.join(__dirname, 'src'),
         query: {
-          presets: 'es2015',
+          presets: ['es2015'],
         },
-      }
+      },
     ]
   },
   plugins: [
     // Avoid publishing files when compilation fails
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    })
   ],
   stats: {
     // Nice colored output
     colors: true
   },
   // Create Sourcemaps for the bundle
-  devtool: 'source-map',
+  devtool: 'source-map'
 };
