@@ -31,4 +31,9 @@ export default class BallRenderer {
 
   render() {
   }
+
+  move() {
+    this.ball.move();
+    this.$ballElement.css("top",  `${this.top()}px`).css("left", `${this.left()}px`)
+  }
 }

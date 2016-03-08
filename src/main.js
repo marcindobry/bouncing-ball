@@ -10,5 +10,6 @@ $(document).ready(function() {
     let ball = new Ball(x, y);
     let ballRenderer = new BallRenderer(ball);
     ballRenderer.$ballElement.appendTo($world);
+    setInterval(ballRenderer.move.bind(ballRenderer), 10);
   })
 });

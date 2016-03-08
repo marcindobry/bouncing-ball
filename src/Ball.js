@@ -7,14 +7,7 @@ export default class Ball {
   }
 
   move() {
-    this.position.x += 1;
-  }
-
-  static maxSpeed() {
-    return 100;
-  }
-
-  static minSpeed() {
-    return 1;
+    this.x += Math.cos(this.angle) * this.speed;
+    this.y += Math.sin(this.angle) * this.speed;
   }
 }
