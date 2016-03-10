@@ -1,8 +1,9 @@
 import Ball from './Ball.js';
 import BallRenderer from './BallRenderer.js';
-import Gravity from './Gravity.js'
-import RandomForce from './RandomForce.js';
 import { dimensions } from "./utilities.js";
+
+import Gravity from './forces/Gravity.js'
+import RandomForce from './forces/RandomForce.js';
 
 $(document).ready(function() {
   let $world = $("#bouncing-world");
