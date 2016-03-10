@@ -1,10 +1,9 @@
 import { dimensions } from "./utilities.js"
 export default class Ball {
-  constructor(x, y) {
+  constructor(x, y, force) {
     this.x = x;
     this.y = y;
-    this.fx = this.randomForce();
-    this.fy = this.randomForce();
+    force.apply(this);
   }
 
   randomForce() {
