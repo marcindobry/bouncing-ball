@@ -29,9 +29,6 @@ export default class BallRenderer {
     return this.radius() * 2;
   }
 
-  render() {
-  }
-
   move() {
     this.ball.move();
     this.$ballElement.css("top",  `${this.top()}px`).css("left", `${this.left()}px`)
