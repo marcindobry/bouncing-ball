@@ -3,8 +3,12 @@ export default class Ball {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.fx = (Math.random() * 5) * (Math.random() > 0.5 ? 1 : -1);
-    this.fy = (Math.random() * 5) * (Math.random() > 0.5 ? 1 : -1);
+    this.fx = this.randomForce();
+    this.fy = this.randomForce();
+  }
+
+  randomForce() {
+    return (Math.random() * 5) * (Math.random() > 0.5 ? 1 : -1);
   }
 
   move() {
