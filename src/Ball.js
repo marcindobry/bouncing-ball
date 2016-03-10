@@ -6,20 +6,15 @@ export default class Ball {
     force.apply(this);
   }
 
-  randomForce() {
-    return (Math.random() * 5) * (Math.random() > 0.5 ? 1 : -1);
-  }
-
   move() {
     this.x += this.fx;
     this.y += this.fy;
-    this.applyGravity();
     this.applyBoundaries();
   }
 
-  applyGravity() {
-    let gravityForce = 0.05;
-    this.fy += gravityForce;
+  applyForces(...forces) {
+    forces.forEach((force) => force.apply(this));
+    this.move();
   }
 
   applyBoundaries() {

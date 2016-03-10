@@ -30,7 +30,6 @@ export default class BallRenderer {
   }
 
   move() {
-    this.ball.move();
     this.$ballElement.css("top",  `${this.top()}px`).css("left", `${this.left()}px`)
   }
 }
