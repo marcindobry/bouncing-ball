@@ -1,8 +1,8 @@
 import Ball from './Ball.js';
 import BallRenderer from './BallRenderer.js';
-import { dimensions } from "./utilities.js";
 
-import Gravity from './forces/Gravity.js'
+import Boundaries from './forces/Boundaries.js';
+import Gravity from './forces/Gravity.js';
 import RandomForce from './forces/RandomForce.js';
 
 $(document).ready(function() {
@@ -14,7 +14,7 @@ $(document).ready(function() {
     let ballRenderer = new BallRenderer(ball);
     ballRenderer.$ballElement.appendTo($world);
     setInterval(function() {
-      ball.applyForces(Gravity);
+      ball.applyForces(Gravity, Boundaries);
       ballRenderer.move();
     }, 10);
   })
