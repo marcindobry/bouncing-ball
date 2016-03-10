@@ -1,5 +1,6 @@
 import Ball from './Ball.js';
 
+import BallRenderer from './BallRenderer.js'
 import Boundaries from './forces/Boundaries.js';
 import Gravity from './forces/Gravity.js';
 import RandomForce from './forces/RandomForce.js';
