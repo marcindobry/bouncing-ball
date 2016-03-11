@@ -1,3 +1,9 @@
+About the solution:
+
+I took the task a bit further than the spec defined and apart from the projectile bouncing
+of the bottom of the browser and having gravity applies, I also bouncing off of all 4 walls and
+included energy dispersion and friction on bouncing.
+
 How to run:
 
 Install packages
