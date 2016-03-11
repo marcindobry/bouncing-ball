@@ -6,6 +6,10 @@ import Gravity from './forces/Gravity.js';
 import RandomForce from './forces/RandomForce.js';
 
 $(document).ready(function() {
+  init();
+});
+
+function init() {
   let $world = $("#bouncing-world");
   $world.on("click", function(e) {
     let x = e.clientX;
@@ -13,5 +17,5 @@ $(document).ready(function() {
     let ball = new Ball(x, y, RandomForce, BallRenderer);
     ball.render().appendTo($world);
     setInterval(ball.applyForces.bind(ball, Gravity, Boundaries), 10);
-  })
-});
+  });
+}
