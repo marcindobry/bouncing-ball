@@ -1,4 +1,6 @@
 var path = require('path');
+var webpack = require('webpack');
+
 module.exports = function(config) {
   config.set({
     browsers: ['PhantomJS'],
@@ -21,6 +23,12 @@ module.exports = function(config) {
           }
         ]
       },
+      plugins: [
+        new webpack.ProvidePlugin({
+          $: "jquery",
+          jQuery: "jquery"
+        })
+      ],
       watch: true
     },
     webpackServer: {
