@@ -2,14 +2,16 @@ How to run:
 
 Install packages
 - npm install
+Warning, you might have peer dependencies errors on some packages that depend on webpack version.
+It's because there is a bug with weback beta versions, but the code actually works.
 
 To see in browser
 - webpack -p
 - npm run server
+- Open browser at localhost:8080
 
 To run tests
 - npm run tests
-
 
 Technologies used:
 - Babel for ES6
