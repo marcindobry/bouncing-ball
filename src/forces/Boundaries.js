@@ -5,6 +5,10 @@ import BottomWall from './walls/BottomWall.js'
 
 export default class Boundaries {
   static apply(object) {
-    [LeftWall, RightWall, TopWall, BottomWall].forEach((force) => force.apply(object));
+    walls().forEach((force) => force.apply(object));
+  }
+
+  static walls() {
+    return [LeftWall, RightWall, TopWall, BottomWall];
   }
 }
