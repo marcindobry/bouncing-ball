@@ -1,3 +1,5 @@
+Solution is deployed at http://bouncing-ball-aweseome.herokuapp.com/
+
 About the solution:
 
 I took the task a bit further than the spec defined and apart from the projectile bouncing
